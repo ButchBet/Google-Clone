@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    --letter-color: black;
+    --letter-color: white;
     --background: white;
 }
 
@@ -14,13 +14,99 @@ body {
     background: var(--background);
 }
 
+html,
+body {
+    min-width: 300px;
+}
+
+body, 
+input, 
+.button {
+    font-size: 1.4rem;
+    font-family: arial,sans-serif;
+    color: #bdc1c6;
+}
+
 .container {
-    display: grid;
-    grid-template-rows: repeat(auto-fill, 1fr);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.container nav,
+.container header,
+.container .searching,
+.container .space,
+.container footer {
+    padding: 6px;
+}
+
+.container nav {
+    background: red;
+}
+
+.container nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.container nav ul li svg {
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+    filter: brightness(0) invert(1);
+    padding: 5px;
+}
+
+.container nav ul li a {
+    text-decoration: none;
+    color: var(--letter-color);
+}
+
+.container nav ul li .button {
+    background: rgb(0, 102, 255);
+    border-radius: 8px;
+    padding: 8px 10px;
+}
+
+.container nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.container nav ul li .button:hover {
+    text-decoration: none;
+    opacity: .9;
+}
+
+.container nav ul li svg:hover {
+    border-radius: 50%;
+    background: #bdc1c664;
+}
+
+.container header {
+    background-color: yellow;
+}
+
+.container .searching {
+    background: blue;
+}
+
+.container .space {
+    background: pink;
+}
+
+.container footer {
+    background: greenyellow;
 }
 
 @media (prefers-color-scheme: dark) {
     * {
-        --background: gray;
+        --background: #202124;
+        ---letter-color: #bdc1c6;
     }
 }
