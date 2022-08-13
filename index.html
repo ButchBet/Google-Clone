@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width: 600px)">
+    <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 800px)">
+    
     <link rel="icon" href="./assets/icons/google-window.png">
-
+    
     <title>Google</title>
-
+    
     <script defer type="module" src="./js/script.js"></script>
 </head>
 <body>
     <div class="container">
         <nav>
             <ul>
-                <li><a href="https://mail.google.com/mail/&ogbl" target="_blank">Account</a></li>
+                <li><a href="https://mail.google.com/mail/&ogbl" target="_blank">Gmail</a></li>
                 <li><a href="https://www.google.com.co/imghp?hl=es-419&ogbl" target="_blank">Images</a></li>
                 <li>
                     <svg class="gb_Ue" focusable="false" viewBox="0 0 24 24">
@@ -30,20 +33,20 @@
 
         <header>
             <figure>
-                <img src="./assets/logos/google.png" alt="Google logo">
+                <a href="https://google.com" target="_blank">
+                    <img src="./assets/logos/google.png" alt="Google logo">
+                </a>
             </figure>
         </header>
 
         <section class="searching">
             <form action="GET">
                 <div class="search">
-                    <label for="search-bar">
-                        <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-                        </svg>
+                    <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                    </svg>
 
-                        <input type="text" name="text" id="search-bar" placeholder="">
-                    </label>
+                    <input type="text" name="text" id="search-bar" placeholder="">
                 </div>
 
                 <div class="options">
@@ -57,44 +60,51 @@
         <div class="space"></div>
 
         <footer>
-            <p class="country">Colombia</p>
+            <div class="country-side">
+                <p class="country">Colombia</p>
+            </div>
 
-            <ul>
-                <li><a href="https://about.google/?utm_source=google-CO&utm_medium=referral&utm_campaign=hp-footer&fg=1" target="_blank">About Google</a></li>
+            <div class="listes">
 
-                <li><a href="https://www.google.com/intl/es-419_co/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" target="_blank">Publicity</a></li>
-
-                <li><a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1" target="_blank">Businesses</a></li>
-
-                <li><a href="https://google.com/search/howsearchworks/?fg=1" target="_blank">How the seaching works</a></li>
-
-                <li><a href="https://policies.google.com/privacy?hl=es-419&fg=1" target="_blank">Pribacity</a></li>
-
-                <li><a href="https://policies.google.com/terms?hl=es-419&fg=1" target="_blank">Conditions</a></li>
-                
-                <li class="false">Preferences</li>
-
-                <ul class="hidden">
+                <ul class="list-top">
+                    <li><a href="https://about.google/?utm_source=google-CO&utm_medium=referral&utm_campaign=hp-footer&fg=1" target="_blank">About Google</a></li>
+    
+                    <li><a href="https://www.google.com/intl/es-419_co/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" target="_blank">Publicity</a></li>
+    
+                    <li><a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1" target="_blank">Businesses</a></li>
+    
+                    <li><a href="https://google.com/search/howsearchworks/?fg=1" target="_blank">How the seaching works</a></li>
+                </ul>
+    
+                <ul class="list-bottom">
+                    <li><a href="https://policies.google.com/privacy?hl=es-419&fg=1" target="_blank">Pribacity</a></li>
+    
+                    <li><a href="https://policies.google.com/terms?hl=es-419&fg=1" target="_blank">Conditions</a></li>
+                    
+                    <li class="false">Preferences</li>
+                </ul>
+    
+                <ul class="list-hidden hidden">
                     <li><a href="https://www.google.com/preferences?hl=es-419&fg=1">Search settings</a></li>
-
+    
                     <li><a href="/advanced_search?hl=es-419&fg=1">Advanced search</a></li>
-
+    
                     <li><a href="/history/privacyadvisor/search/unauth?utm_source=googlemenu&fg=1&cctld=com">Your search data</a></li>
-
+    
                     <li><a href="/history/optout?hl=es-419&fg=1">Search history</a></li>
-
+    
                     <li><a href="https://support.google.com/websearch/?p=ws_results_help&hl=es-419&fg=1">Search settings</a></li>
-
+    
                     <li><a href="https://www.google.com/preferences?hl=es-419&fg=1">Search in help</a></li>
-
+    
                     <li>Send feedback</li>
-
+    
                     <li>
                         <p>Dark theme: </p>
                         <span>Active</span>
                     </li>
                 </ul>
-            </ul>
+            </div>
         </footer>
     </div>
 </body>
