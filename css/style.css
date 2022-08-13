@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    --letter-color: black;
+    --background: white;
 }
 
 html {
@@ -9,4 +11,16 @@ html {
 }
 
 body {
+    background: var(--background);
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 1fr);
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        --background: gray;
+    }
 }
