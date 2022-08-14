@@ -2,6 +2,16 @@
     height: 110px;
 }
 
+.container header figure img {
+    
+}
+
 .container .space {
-    height: 150px;
+    height: 168px;
+}
+
+.container footer .listes {
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
 }
