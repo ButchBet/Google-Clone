@@ -13,12 +13,12 @@
 This is a solution to the [Project of the Practical Course of HTML and CSS](https://platzi.com/cursos/html-practico/).
 
 ### Screenshot
-![Desktop]()
-![Mobile]()
+![Desktop](./assets/desktop.png)
+![Mobile](./assets/mobile.png)
 
 ### Links
 - Solution URL: [GitHub](https://github.com/ButchBet/Google-Clone)
-- Live Site URL: [Clock](https://butchbet.github.io/Google-Clone/)
+- Live Site URL: [Google](https://butchbet.github.io/Google-Clone/)
 
 ### Built with
 - Semantic HTML5 markup
