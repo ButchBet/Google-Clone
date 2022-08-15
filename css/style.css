@@ -2,8 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    --letter-color: white;
     --background: white;
+    --color: #999da2;
 }
 
 html {
@@ -37,7 +37,7 @@ input,
 .container nav,
 .container header,
 .container .searching,
-.container .space {
+.container footer {
     padding: 6px;
 }
 
@@ -61,13 +61,13 @@ input,
     cursor: pointer;
     display: flex;
     align-content: center;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(.5);
     padding: 5px;
 }
 
 .container nav ul li a {
     text-decoration: none;
-    color: var(--letter-color);
+    color: var(--color);
 }
 
 .container nav ul li .button {
@@ -95,7 +95,6 @@ input,
 }
 
 .container header {
-    /* background-color: yellow; */
     height: 200px;
     display: flex;
     flex-flow: row wrap;
@@ -111,8 +110,9 @@ input,
     place-content: center;
 }
 
-.container header figure img {
+.container header figure a img {
     width: 25.2rem;
+    filter: brightness(0) invert(.2);
 }
 
 .container .searching {
@@ -137,7 +137,7 @@ input,
     max-width: 584px;
     padding: 10px 15px;
     border-radius: 30px;
-    border: 1px solid #bdc1c664;
+    border: 2px solid #bdc1c664;
     gap: 20px;
 }
 
@@ -145,7 +145,7 @@ input,
     width: 20px;
     height: 20px;
     cursor: pointer;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(0.2);
 }
 
 .container .searching form .search #search-bar {
@@ -180,7 +180,7 @@ input,
 }
 
 .container footer {
-    background: #171717;
+    background: #f4efef;
     display: flex;
     flex-flow: column nowrap;
     gap: 20px;
@@ -191,7 +191,7 @@ input,
     border-bottom: 1px solid #3c4043;
     padding: 10px 20px;
     font-size: 1.4rem;
-    color: #999da2;
+    color: var(--color);
 }
 
 .container footer .listes {
@@ -210,7 +210,7 @@ input,
 }
 
 .container footer .listes ul li a {
-    color: #999da2;
+    color: var(--color);
     text-decoration: none;
 }
 
@@ -221,6 +221,17 @@ input,
 @media (prefers-color-scheme: dark) {
     * {
         --background: #202124;
-        ---letter-color: #bdc1c6;
+        --color: white;
+
+    }
+    
+    .container nav ul li svg,
+    .container header figure a img,
+    .container .searching form .search svg {
+        filter: brightness(0) invert(1);
+    }
+    
+    .container footer {
+        background: #171717;
     }
 }
