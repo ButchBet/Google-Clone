@@ -1,15 +1,3 @@
-.container header {
-    height: 110px;
-}
-
-.container header figure img {
-    
-}
-
-.container .space {
-    height: 181px;
-}
-
 .container footer .listes {
     justify-content: space-between;
     padding-left: 20px;

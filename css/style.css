@@ -2,8 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    --background: white;
-    --color: #999da2;
+    --background1: white;
+    --background2: #f2f2f2;
+    --color1: rgba(0,0,0,.87);
+    --color2: #70757a;
+    --color3: #bdc1c6;
+    --color4: white;
 }
 
 html {
@@ -11,7 +15,7 @@ html {
 }
 
 body {
-    background: var(--background);
+    background: var(--background1);
     height: 100vh;
 }
 
@@ -21,11 +25,9 @@ body {
 }
 
 body, 
-input, 
-.container nav ul li .button {
+input {
     font-size: 1.4rem;
     font-family: arial,sans-serif;
-    color: #bdc1c6;
 }
 
 .container {
@@ -35,16 +37,9 @@ input,
     width: 100vw;
 }
 
-.container nav,
-.container header,
-.container .searching,
-.container footer {
-    padding: 6px;
-}
-
 .container nav {
-    /* background: red; */
     height: 60px;
+    padding: 6px;
 }
 
 .container nav ul {
@@ -57,46 +52,46 @@ input,
 }
 
 .container nav ul li svg {
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     display: flex;
     align-content: center;
-    filter: brightness(0) invert(.5);
-    padding: 5px;
+    filter: brightness(0) invert(.4);
+    padding: 8px;
 }
 
 .container nav ul li a {
     text-decoration: none;
-    color: var(--color);
+    color: var(--color1);
 }
 
 .container nav ul li .button {
-    background: #8ab4f8;
+    background: #2b7de9;
     border-radius: 4px;
     border: 1px solid transparent;
-    padding: 9px 20px;
-    color: #202124;
+    padding: 9px 23px;
+    color: var(--color4);
 }
 
 .container nav ul li a:hover,
-.container footer .listes ul li a:hover {
+.container footer .listes ul li:hover {
     text-decoration: underline;
 }
 
 .container nav ul li .button:hover {
     text-decoration: none;
-    opacity: .9;
-    background: #f8fbff;
+    background: #2b7de9;
+    box-shadow: 0 1px 2px 0 rgba(66,133,244,.3),0 1px 3px 1px rgba(66,133,244,.15);
 }
 
 .container nav ul li svg:hover {
     border-radius: 50%;
-    background: #bdc1c664;
+    background: rgba(60,64,67,.08);
 }
 
 .container header {
-    height: 200px;
+    height: 207px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -111,9 +106,11 @@ input,
     place-content: center;
 }
 
-.container header figure a img {
-    width: 25.2rem;
-    filter: brightness(0) invert(.2);
+.container header figure a div {
+    width: 27.2rem;
+    height: 9.2rem;
+    background: url("../assets/logos/google-light.png");
+    background-size: cover;
 }
 
 .container .searching {
@@ -125,6 +122,7 @@ input,
     flex-flow: column wrap;
     justify-content: flex-start;
     align-content: center;
+    padding: 20px;
     width: 100%;
     gap: 25px;
 }
@@ -136,22 +134,24 @@ input,
     width: 100%;
     min-width: 300px;
     max-width: 584px;
+    height: 44px;
     padding: 10px 15px;
     border-radius: 30px;
-    border: 2px solid #bdc1c664;
-    gap: 20px;
+    border: 1.5px solid #bdc1c664;
+    gap: 13px;
 }
 
 .container .searching form .search svg {
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     cursor: pointer;
-    filter: brightness(0) invert(0.2);
+    filter: brightness(0) invert(0.5);
 }
 
 .container .searching form .search #search-bar {
     width: 100%;
     border: none;
+    color: rgba(0,0,0,.87);
     background: transparent;
 }
 
@@ -168,12 +168,18 @@ input,
 
 .container .searching .options input {
     border-radius: 4px;
-    background-color: #303134;
-    border: 1px solid #303134;
-    color: #e8eaed;
+    background: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    color: #3c4043;
     min-width: 54px;
     padding: 7px 16px;
     cursor: pointer;
+}
+
+.container .searching .options input:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    border: 1px solid #dadce0;
+    color: #202124;
 }
 
 .container .space {
@@ -181,7 +187,7 @@ input,
 }
 
 .container footer {
-    background: #f4efef;
+    background: var(--background2);
     display: flex;
     flex-flow: column nowrap;
     gap: 20px;
@@ -189,10 +195,9 @@ input,
 }
 
 .container footer .country-side {
-    border-bottom: 1px solid #3c4043;
-    padding: 10px 20px;
+    padding: 15px 30px;
     font-size: 1.4rem;
-    color: var(--color);
+    color: var(--color2);
 }
 
 .container footer .listes {
@@ -211,8 +216,13 @@ input,
 }
 
 .container footer .listes ul li a {
-    color: var(--color);
+    color: var(--color2);
     text-decoration: none;
+}
+
+.container footer .listes ul li {
+    color: var(--color2);
+    cursor: pointer;
 }
 
 .container footer .listes .hidden {
@@ -221,18 +231,47 @@ input,
 
 @media (prefers-color-scheme: dark) {
     * {
-        --background: #202124;
-        --color: white;
-
+        --background1:#202124;;
+        --background2: #171717;
+        --color1: white;
+        --color2: #9aa0a6;
+        --color3: #bdc1c6;
+        --color4: #202124;
     }
     
     .container nav ul li svg,
-    .container header figure a img,
     .container .searching form .search svg {
         filter: brightness(0) invert(1);
     }
-    
-    .container footer {
-        background: #171717;
+    .container header figure a div {
+        background: url("../assets/logos/google-dark.png");
+        width: 27.2rem;
+        height: 9.2rem;
+        background-size: cover;
+    }
+
+    .container nav ul li .button {
+        background: #8ab4f8;
+        border: 1px solid transparent;
+        box-shadow: none;
+        color: #202124;
+    }
+
+    .container nav ul li .button:hover {
+        background: #f8fbff;
+    border-color: #cce0fc;
+    }
+
+    .container .searching .options input {
+        background: #303134;
+        border: 1px solid #303134;
+        color: #e8eaed;
+    }
+
+    .container .searching .options input:hover {
+        box-shadow: 0 1px 3px rgba(23,23,23,0.24);
+        background: #303134;
+        border: 1px solid #5f6368;
+        color: #e8eaed;
     }
 }

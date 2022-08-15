@@ -13,8 +13,10 @@
 This is a solution to the [Project of the Practical Course of HTML and CSS](https://platzi.com/cursos/html-practico/).
 
 ### Screenshot
-![Desktop](./assets/desktop.png)
-![Mobile](./assets/mobile.png)
+![Desktop Dark](./assets/desktop-dark.png)
+![Desktop Light](./assets/desktop-light.png)
+![Mobile Dark](./assets/mobile-dark.png)
+![Mobile Light](./assets/mobile-light.png)
 
 ### Links
 - Solution URL: [GitHub](https://github.com/ButchBet/Google-Clone)
