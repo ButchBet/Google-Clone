@@ -12,6 +12,7 @@ html {
 
 body {
     background: var(--background);
+    height: 100vh;
 }
 
 html,
@@ -30,7 +31,7 @@ input,
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: auto;
     width: 100vw;
 }
 
